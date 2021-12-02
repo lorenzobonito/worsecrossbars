@@ -1,0 +1,40 @@
+name: Commit
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.7", "3.8", "3.9"]
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v2
+      with:
+        python-version: ${{ matrix.python-version }}
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install wheel
+        pip install matplotlib pymsteams numpy dropbox wget jsonschema
+        pip install black pylint flake8 pyupgrade reorder-python-imports mypy
+    - name: Running black
+      run: |
+        black --safe --line-length=100 $(find . -name "*.py" | xargs)
+    - name: Running pylint
+      run: |
+        pylint --ignored-modules=tensorflow.keras --disable=W9006 $(find . -name "*.py" | xargs)
+    - name: Running flake8
+      run: |
+        flake8 --max-line-length=100 $(find . -name "*.py" | xargs)
+    - name: Running mypy
+      run: |
+        mypy --ignore-missing-imports $(find . -name "*.py" | xargs)
+    - name: Checking imports
+      run: |
+        reorder-python-imports --py37-plus $(find . -name "*.py" | xargs)
+    - name: Checking syntax
+      run: |
+        pyupgrade --py37-plus $(find . -name "*.py" | xargs)

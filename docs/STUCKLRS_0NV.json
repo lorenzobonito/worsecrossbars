@@ -1,0 +1,123 @@
+{
+    "simulations": [
+        {
+            "HRS_LRS_ratio": 5,
+            "number_conductance_levels": 10,
+            "excluded_weights_proportion": 0.015,
+            "number_hidden_layers": 1,
+            "fault_type": "STUCKLRS",
+            "noise_variance": 0,
+            "number_ANNs": 30,
+            "number_simulations": 30
+        },
+        {
+            "HRS_LRS_ratio": 5,
+            "number_conductance_levels": 10,
+            "excluded_weights_proportion": 0.015,
+            "number_hidden_layers": 2,
+            "fault_type": "STUCKLRS",
+            "noise_variance": 0,
+            "number_ANNs": 30,
+            "number_simulations": 30
+        },
+        {
+            "HRS_LRS_ratio": 5,
+            "number_conductance_levels": 10,
+            "excluded_weights_proportion": 0.015,
+            "number_hidden_layers": 3,
+            "fault_type": "STUCKLRS",
+            "noise_variance": 0,
+            "number_ANNs": 30,
+            "number_simulations": 30
+        },
+        {
+            "HRS_LRS_ratio": 5,
+            "number_conductance_levels": 10,
+            "excluded_weights_proportion": 0.015,
+            "number_hidden_layers": 4,
+            "fault_type": "STUCKLRS",
+            "noise_variance": 0,
+            "number_ANNs": 30,
+            "number_simulations": 30
+        }
+    ],
+    "accuracy_plots_parameters": [
+        {
+            "plots_data": [
+                "STUCKLRS_1_0",
+                "STUCKLRS_2_0",
+                "STUCKLRS_3_0",
+                "STUCKLRS_4_0"
+            ],
+            "xlabel": "Percentage of devices stuck at zero",
+            "title": "",
+            "filename": "accuracies_STUCKLRS_ALL_0"
+        }
+    ],
+    "training_validation_plots_parameters": [
+        {
+            "plots_data": [
+                "STUCKLRS_1_0"
+            ],
+            "title": "",
+            "filename": "training_validation_accuracy_STUCKLRS_1_0",
+            "value_type": "accuracy"
+        },
+        {
+            "plots_data": [
+                "STUCKLRS_1_0"
+            ],
+            "title": "",
+            "filename": "training_validation_loss_STUCKLRS_1_0",
+            "value_type": "loss"
+        },
+        {
+            "plots_data": [
+                "STUCKLRS_2_0"
+            ],
+            "title": "",
+            "filename": "training_validation_accuracy_STUCKLRS_2_0",
+            "value_type": "accuracy"
+        },
+        {
+            "plots_data": [
+                "STUCKLRS_2_0"
+            ],
+            "title": "",
+            "filename": "training_validation_loss_STUCKLRS_2_0",
+            "value_type": "loss"
+        },
+        {
+            "plots_data": [
+                "STUCKLRS_3_0"
+            ],
+            "title": "",
+            "filename": "training_validation_accuracy_STUCKLRS_3_0",
+            "value_type": "accuracy"
+        },
+        {
+            "plots_data": [
+                "STUCKLRS_3_0"
+            ],
+            "title": "",
+            "filename": "training_validation_loss_STUCKLRS_3_0",
+            "value_type": "loss"
+        },
+        {
+            "plots_data": [
+                "STUCKLRS_4_0"
+            ],
+            "title": "",
+            "filename": "training_validation_accuracy_STUCKLRS_4_0",
+            "value_type": "accuracy"
+        },
+        {
+            "plots_data": [
+                "STUCKLRS_4_0"
+            ],
+            "title": "",
+            "filename": "training_validation_loss_STUCKLRS_4_0",
+            "value_type": "loss"
+        }
+    ]
+}
