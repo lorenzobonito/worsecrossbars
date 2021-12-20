@@ -1,7 +1,7 @@
 matplotlib==3.5.0
 tensorflow==2.7.0
 pymsteams>=0.1.16
-numpy==1.21.4
+numpy==1.21.5
 dropbox>=11.23.0
 wget>=3.2
 pylint>=2.11.1
