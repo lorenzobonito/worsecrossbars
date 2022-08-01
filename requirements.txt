@@ -5,4 +5,4 @@ numpy==1.22.2
 dropbox>=11.23.0
 wget>=3.2
 pylint>=2.11.1
-jsonschema==4.4.0
+jsonschema==4.9.0
