@@ -1,5 +1,5 @@
 matplotlib==3.5.0
-tensorflow==2.8.0
+tensorflow==2.9.2
 pymsteams>=0.1.16
 numpy==1.22.2
 dropbox>=11.23.0
